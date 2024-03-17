@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excuse Generator</title>
+</head>
+
+<body>
+  <h1>Excuse Generator</h1>
+  <p id="excuse"></p>
+
+  <script>
+    // Arrays con las partes de la excusa
+    let who = ['El chancho', 'Mi perro', 'Su tortuga', 'Mi pájaro'];
+    let action = ['se comió', 'mordió', 'aplastó', 'rompió'];
+    let what = ['mi tarea', 'la cama', 'el coche'];
+    let when = ['antes de la clase', 'justo a tiempo', 'cuando terminé', 'durante mi almuerzo', 'mientras dormia'];
+
+    // Función para generar una excusa aleatoria
+    function generateExcuse() {
+      let randomWho = who[Math.floor(Math.random() * who.length)];
+      let randomAction = action[Math.floor(Math.random() * action.length)];
+      let randomWhat = what[Math.floor(Math.random() * what.length)];
+      let randomWhen = when[Math.floor(Math.random() * when.length)];
+      return randomWho + ' ' + randomAction + ' ' + randomWhat + ' ' + randomWhen + '.';
+    }
+
+    // Mostrar la excusa en la página
+    document.getElementById('excuse').innerText = generateExcuse();
+  </script>
+</body>
+
+</html>
