@@ -18,7 +18,6 @@
     let what = ['mi tarea', 'la cama', 'el coche'];
     let when = ['antes de la clase', 'justo a tiempo', 'cuando terminé', 'durante mi almuerzo', 'mientras dormia'];
 
-    // Función para generar una excusa aleatoria
     function generateExcuse() {
       let randomWho = who[Math.floor(Math.random() * who.length)];
       let randomAction = action[Math.floor(Math.random() * action.length)];
@@ -27,7 +26,6 @@
       return randomWho + ' ' + randomAction + ' ' + randomWhat + ' ' + randomWhen + '.';
     }
 
-    // Mostrar la excusa en la página
     document.getElementById('excuse').innerText = generateExcuse();
   </script>
 </body>
